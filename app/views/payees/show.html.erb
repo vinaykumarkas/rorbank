@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="jumbotron">
+		<p id="notice">
+			<%= notice %>
+		</p>
+
+		<p>
+			<strong>Nick name:</strong>
+			<%= @payee.nick_name %>
+		</p>
+
+		<p>
+			<strong>Account name:</strong>
+			<%= @payee.account_name %>
+		</p>
+
+		<p>
+			<strong>Bsb:</strong>
+			<%= @payee.bsb %>
+		</p>
+
+		<p>
+			<strong>Account number:</strong>
+			<%= @payee.account_number %>
+		</p>
+
+		<%= link_to 'Edit', edit_payee_path(@payee), class: "btn btn-primary" %> |
+		<%= link_to 'Back', payees_path, class: "btn btn-primary" %>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="jumbotron">
+		<p id="notice">
+			<%= notice %>
+		</p>
+
+		<p>
+			<strong>From account:</strong>
+			<%= @transaction.from_account %>
+		</p>
+
+		<p>
+			<strong>To account:</strong>
+			<%= @transaction.to_account %>
+		</p>
+
+		<p>
+			<strong>Amount:</strong>
+			<%= @transaction.amount %>
+		</p>
+
+		<p>
+			<strong>Balance:</strong>
+			<%= @transaction.balance %>
+		</p>
+
+		<p>
+			<strong>Payment date:</strong>
+			<%= @transaction.payment_date %>
+		</p>
+
+		<p>
+			<strong>Remarks:</strong>
+			<%= @transaction.remarks %>
+		</p>
+
+		<%= link_to 'Edit', edit_transaction_path(@transaction), class: "btn btn-primary" %> |
+		<%= link_to 'Back', transactions_path, class: "btn btn-primary" %>
+	</div>
+</div>

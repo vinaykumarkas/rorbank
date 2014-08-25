@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="jumbotron">
+		<h2>Listing payees</h2>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Nick name</th>
+					<th>Account name</th>
+					<th>Bsb</th>
+					<th>Account number</th>
+					<th colspan="3"></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @payees.each do |payee| %>
+				<tr>
+					<td><%= payee.nick_name %></td>
+					<td><%= payee.account_name %></td>
+					<td><%= payee.bsb %></td>
+					<td><%= payee.account_number %></td>
+					<td><%= link_to 'Show', payee, class: "btn btn-primary btn-xs" %></td>
+					<td><%= link_to 'Edit', edit_payee_path(payee), class: "btn btn-warning btn-xs"  %></td>
+					<td><%= link_to 'Destroy', payee, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs"  %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+
+		<br>
+
+		<%= link_to 'New Payee', new_payee_path, class: "btn btn-primary" %>
+	</div>
+</div>
